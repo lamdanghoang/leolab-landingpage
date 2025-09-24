@@ -1,14 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "@/components/ui/badge";
-import {
-    Smartphone,
-    Globe,
-    Database,
-    Shield,
-    Cpu,
-    Zap,
-    ArrowRight,
-} from "lucide-react";
+import { Smartphone, Globe, Database, Shield, Cpu, Zap } from "lucide-react";
 
 const services = [
     {

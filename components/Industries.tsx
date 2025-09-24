@@ -1,5 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardHeader, CardTitle } from "./ui/card";
 import {
     Fuel,
     Landmark,
