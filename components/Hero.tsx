@@ -13,7 +13,7 @@ export function Hero() {
                         <div className="space-y-4">
                             <h1 className="text-3xl md:text-3xl font-bold text-white leading-tight">
                                 Your Partner in
-                                <span className="text-blue-600">
+                                <span className="bg-gradient-to-r from-leolab-red to-leolab-orange bg-clip-text text-transparent font-bold">
                                     {" "}
                                     Blockchain & AI workflow{" "}
                                 </span>
@@ -29,7 +29,7 @@ export function Hero() {
 
                         <Button
                             size="lg"
-                            className="px7 py-2.5 bg-red-600 text-white hover:bg-white text-base font-bold hover:text-red-600 border-2 border-red-600 rounded-4xl uppercase"
+                            className="px7 py-2.5 bg-leolab-red text-white hover:bg-white text-base font-bold hover:text-leolab-red border-2 border-leolab-red rounded-4xl uppercase"
                         >
                             Consult Our Experts
                         </Button>

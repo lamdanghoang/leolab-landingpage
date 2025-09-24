@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -42,10 +43,15 @@ export function Header() {
                     {/* Logo */}
                     <div className="flex-shrink-0">
                         <div className="flex items-center">
-                            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                                <span className="text-white font-bold">S</span>
+                            <div className="w-8">
+                                <Image
+                                    src="/leolab-logo.png"
+                                    alt="LeoLab logo"
+                                    width={80}
+                                    height={80}
+                                />
                             </div>
-                            <span className="ml-2 text-2xl font-bold text-gray-900">
+                            <span className="ml-2 text-3xl bg-gradient-to-r from-leolab-red to-leolab-orange bg-clip-text text-transparent font-bold">
                                 LeoLab
                             </span>
                         </div>
