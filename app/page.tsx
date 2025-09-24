@@ -5,6 +5,7 @@ import { About } from "@/components/About";
 import { Portfolio } from "@/components/Portfolio";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { Industries } from "@/components/Industries";
 
 export default function App() {
     return (
@@ -13,6 +14,7 @@ export default function App() {
             <main>
                 <Hero />
                 <Services />
+                <Industries />
                 <About />
                 <Portfolio />
                 <Contact />

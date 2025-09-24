@@ -2,14 +2,42 @@
 
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
+
+const navigations = [
+    {
+        label: "About us",
+        href: "#about",
+    },
+    {
+        label: "Services",
+        href: "#services",
+    },
+    {
+        label: "Hire Developers",
+        href: "#hire",
+    },
+    {
+        label: "Industries",
+        href: "#industries",
+    },
+    {
+        label: "Case Studies",
+        href: "#case",
+    },
+    {
+        label: "Blog",
+        href: "#blog",
+    },
+];
 
 export function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
         <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 py-2 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
                     <div className="flex-shrink-0">
@@ -17,56 +45,29 @@ export function Header() {
                             <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                                 <span className="text-white font-bold">S</span>
                             </div>
-                            <span className="ml-2 text-xl font-bold text-gray-900">
-                                SoluLab
+                            <span className="ml-2 text-2xl font-bold text-gray-900">
+                                LeoLab
                             </span>
                         </div>
                     </div>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden md:flex space-x-8">
-                        <a
-                            href="#home"
-                            className="text-gray-700 hover:text-blue-600 transition-colors"
-                        >
-                            Home
-                        </a>
-                        <a
-                            href="#services"
-                            className="text-gray-700 hover:text-blue-600 transition-colors"
-                        >
-                            Services
-                        </a>
-                        <a
-                            href="#about"
-                            className="text-gray-700 hover:text-blue-600 transition-colors"
-                        >
-                            About
-                        </a>
-                        <a
-                            href="#portfolio"
-                            className="text-gray-700 hover:text-blue-600 transition-colors"
-                        >
-                            Portfolio
-                        </a>
-                        <a
-                            href="#team"
-                            className="text-gray-700 hover:text-blue-600 transition-colors"
-                        >
-                            Team
-                        </a>
-                        <a
-                            href="#contact"
-                            className="text-gray-700 hover:text-blue-600 transition-colors"
-                        >
-                            Contact
-                        </a>
+                    <nav className="hidden md:flex">
+                        {navigations.map((nav, i) => (
+                            <Link
+                                key={i}
+                                href={nav.href}
+                                className="px-4 text-lg text-black font-semibold hover:text-red-600 transition-colors"
+                            >
+                                {nav.label}
+                            </Link>
+                        ))}
                     </nav>
 
                     {/* CTA Button */}
                     <div className="hidden md:flex">
-                        <Button className="bg-blue-600 hover:bg-blue-700">
-                            Get Started
+                        <Button className="px-6 bg-transparent text-red-600 border-2 border-red-600 text-base hover:bg-red-600 hover:text-white rounded-none">
+                            Inquire
                         </Button>
                     </div>
 
@@ -85,45 +86,18 @@ export function Header() {
                 {isMenuOpen && (
                     <div className="md:hidden">
                         <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
-                            <a
-                                href="#home"
-                                className="block px-3 py-2 text-gray-700 hover:text-blue-600"
-                            >
-                                Home
-                            </a>
-                            <a
-                                href="#services"
-                                className="block px-3 py-2 text-gray-700 hover:text-blue-600"
-                            >
-                                Services
-                            </a>
-                            <a
-                                href="#about"
-                                className="block px-3 py-2 text-gray-700 hover:text-blue-600"
-                            >
-                                About
-                            </a>
-                            <a
-                                href="#portfolio"
-                                className="block px-3 py-2 text-gray-700 hover:text-blue-600"
-                            >
-                                Portfolio
-                            </a>
-                            <a
-                                href="#team"
-                                className="block px-3 py-2 text-gray-700 hover:text-blue-600"
-                            >
-                                Team
-                            </a>
-                            <a
-                                href="#contact"
-                                className="block px-3 py-2 text-gray-700 hover:text-blue-600"
-                            >
-                                Contact
-                            </a>
+                            {navigations.map((nav, i) => (
+                                <Link
+                                    key={i}
+                                    href={nav.href}
+                                    className="block px-4 text-lg text-black font-semibold hover:text-red-600 transition-colors"
+                                >
+                                    {nav.label}
+                                </Link>
+                            ))}
                             <div className="px-3 py-2">
-                                <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                                    Get Started
+                                <Button className="w-full px-6 bg-transparent text-red-600 border-2 border-red-600 text-base hover:bg-red-600 hover:text-white rounded-none">
+                                    Inquire
                                 </Button>
                             </div>
                         </div>

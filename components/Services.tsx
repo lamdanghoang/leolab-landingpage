@@ -17,7 +17,6 @@ const services = [
         description:
             "Build secure, scalable blockchain solutions with smart contracts, DeFi platforms, and cryptocurrency applications.",
         technologies: ["Ethereum", "Solidity", "Web3", "NFTs"],
-        color: "from-blue-500 to-cyan-500",
     },
     {
         icon: Smartphone,
@@ -25,7 +24,6 @@ const services = [
         description:
             "Create stunning iOS and Android applications with native performance and seamless user experiences.",
         technologies: ["React Native", "Flutter", "iOS", "Android"],
-        color: "from-purple-500 to-pink-500",
     },
     {
         icon: Globe,
@@ -33,7 +31,6 @@ const services = [
         description:
             "Develop modern web applications with cutting-edge technologies and responsive designs.",
         technologies: ["React", "Node.js", "TypeScript", "Next.js"],
-        color: "from-green-500 to-emerald-500",
     },
     {
         icon: Shield,
@@ -41,7 +38,6 @@ const services = [
         description:
             "Protect your digital assets with comprehensive security audits and penetration testing.",
         technologies: ["Security Audit", "Penetration Testing", "Compliance"],
-        color: "from-red-500 to-orange-500",
     },
     {
         icon: Cpu,
@@ -49,7 +45,6 @@ const services = [
         description:
             "Leverage artificial intelligence to automate processes and gain insights from your data.",
         technologies: ["Python", "TensorFlow", "ML Models", "Data Science"],
-        color: "from-indigo-500 to-purple-500",
     },
     {
         icon: Zap,
@@ -57,7 +52,6 @@ const services = [
         description:
             "Scale your applications with robust cloud infrastructure and DevOps practices.",
         technologies: ["AWS", "Azure", "Docker", "Kubernetes"],
-        color: "from-yellow-500 to-orange-500",
     },
 ];
 
@@ -66,10 +60,12 @@ export function Services() {
         <section id="services" className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                        Our Services
+                    <h2 className="text-3xl font-bold text-gray-900">
+                        Unlock the Future of Tomorrow With Our Comprehensive
+                        Services
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <div className="w-40 h-0.5 bg-red-500 mx-auto mt-2 mb-4"></div>
+                    <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                         We offer comprehensive technology solutions to help your
                         business thrive in the digital age
                     </p>
@@ -79,20 +75,20 @@ export function Services() {
                     {services.map((service, index) => (
                         <Card
                             key={index}
-                            className="group hover:shadow-xl transition-all duration-300 border-0 shadow-md hover:-translate-y-2"
+                            className="group hover:bg-red-500 hover:shadow-xl transition-all duration-300 border shadow-[0_0_15px_rgba(0,0,0,0.2)] hover:-translate-y-2"
                         >
-                            <CardHeader className="pb-4">
+                            <CardHeader className="pb-4 flex flex-col items-center justify-center">
                                 <div
-                                    className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                                    className={`w-16 h-16 rounded-xl bg-red-500 group-hover:bg-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
                                 >
-                                    <service.icon className="h-8 w-8 text-white" />
+                                    <service.icon className="h-8 w-8 text-white group-hover:text-red-500" />
                                 </div>
-                                <CardTitle className="text-xl mb-2">
+                                <CardTitle className="text-xl mb-2 group-hover:text-white">
                                     {service.title}
                                 </CardTitle>
                             </CardHeader>
                             <CardContent className="space-y-4">
-                                <p className="text-gray-600 leading-relaxed">
+                                <p className="text-gray-800 leading-relaxed text-center group-hover:text-white">
                                     {service.description}
                                 </p>
 
@@ -102,38 +98,16 @@ export function Services() {
                                             <Badge
                                                 key={techIndex}
                                                 variant="secondary"
-                                                className="text-xs"
+                                                className="text-xs group-hover:text-red-500 group-hover:bg-white"
                                             >
                                                 {tech}
                                             </Badge>
                                         )
                                     )}
                                 </div>
-
-                                <div className="flex items-center text-blue-600 group-hover:text-blue-700 cursor-pointer pt-2">
-                                    <span className="mr-2">Learn More</span>
-                                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                                </div>
                             </CardContent>
                         </Card>
                     ))}
-                </div>
-
-                {/* CTA Section */}
-                <div className="text-center mt-16">
-                    <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-                        <h3 className="text-2xl font-bold mb-4">
-                            Ready to Transform Your Business?
-                        </h3>
-                        <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-                            Let&apos;s discuss your project and create something
-                            amazing together. Our team is ready to bring your
-                            vision to life.
-                        </p>
-                        <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                            Start Your Project
-                        </button>
-                    </div>
                 </div>
             </div>
         </section>
