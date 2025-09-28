@@ -11,6 +11,12 @@ const services = [
         technologies: ["Ethereum", "Solidity", "Web3", "NFTs"],
     },
     {
+        icon: Cpu,
+        title: "AI Workflow",
+        description: "Leverage artificial intelligence to automate processes.",
+        technologies: ["Python", "n8n", "Make"],
+    },
+    {
         icon: Smartphone,
         title: "Mobile App Development",
         description:
@@ -24,27 +30,6 @@ const services = [
             "Develop modern web applications with cutting-edge technologies and responsive designs.",
         technologies: ["React", "Node.js", "TypeScript", "Next.js"],
     },
-    {
-        icon: Shield,
-        title: "Cybersecurity",
-        description:
-            "Protect your digital assets with comprehensive security audits and penetration testing.",
-        technologies: ["Security Audit", "Penetration Testing", "Compliance"],
-    },
-    {
-        icon: Cpu,
-        title: "AI & Machine Learning",
-        description:
-            "Leverage artificial intelligence to automate processes and gain insights from your data.",
-        technologies: ["Python", "TensorFlow", "ML Models", "Data Science"],
-    },
-    {
-        icon: Zap,
-        title: "Cloud Solutions",
-        description:
-            "Scale your applications with robust cloud infrastructure and DevOps practices.",
-        technologies: ["AWS", "Azure", "Docker", "Kubernetes"],
-    },
 ];
 
 export function Services() {
@@ -56,26 +41,26 @@ export function Services() {
                         Unlock the Future of Tomorrow With Our Comprehensive
                         Services
                     </h2>
-                    <div className="w-40 h-0.5 bg-red-500 mx-auto mt-2 mb-4"></div>
+                    <div className="w-40 h-0.5 bg-leolab-red mx-auto mt-2 mb-4"></div>
                     <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                         We offer comprehensive technology solutions to help your
                         business thrive in the digital age
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {services.map((service, index) => (
                         <Card
                             key={index}
-                            className="group hover:bg-red-500 hover:shadow-xl transition-all duration-300 border shadow-[0_0_15px_rgba(0,0,0,0.2)] hover:-translate-y-2"
+                            className="group hover:bg-leolab-red hover:shadow-xl transition-all duration-300 border shadow-[0_0_15px_rgba(0,0,0,0.2)] hover:-translate-y-2"
                         >
                             <CardHeader className="pb-4 flex flex-col items-center justify-center">
                                 <div
-                                    className={`w-16 h-16 rounded-xl bg-red-500 group-hover:bg-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                                    className={`w-16 h-16 rounded-xl bg-leolab-red group-hover:bg-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
                                 >
-                                    <service.icon className="h-8 w-8 text-white group-hover:text-red-500" />
+                                    <service.icon className="h-8 w-8 text-white group-hover:text-leolab-red" />
                                 </div>
-                                <CardTitle className="text-xl mb-2 group-hover:text-white">
+                                <CardTitle className="text-xl mb-2 group-hover:text-white text-center">
                                     {service.title}
                                 </CardTitle>
                             </CardHeader>
@@ -90,7 +75,7 @@ export function Services() {
                                             <Badge
                                                 key={techIndex}
                                                 variant="secondary"
-                                                className="text-xs group-hover:text-red-500 group-hover:bg-white"
+                                                className="text-xs group-hover:text-leolab-red group-hover:bg-white"
                                             >
                                                 {tech}
                                             </Badge>

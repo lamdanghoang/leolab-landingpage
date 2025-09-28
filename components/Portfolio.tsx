@@ -75,14 +75,17 @@ export function Portfolio() {
         <section id="portfolio" className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                    <h2 className="text-3xl font-semibold text-gray-900">
                         Our Portfolio
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                    <div className="w-40 h-0.5 bg-leolab-red mx-auto mt-2 mb-4"></div>
+                    <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                         Explore our latest projects and see how we&apos;ve
                         helped businesses transform their digital presence
                     </p>
+                </div>
 
+                <div>
                     {/* Category Filter */}
                     <div className="flex flex-wrap justify-center gap-2 mb-8">
                         {categories.map((category, index) => (
@@ -92,7 +95,7 @@ export function Portfolio() {
                                 size="sm"
                                 className={
                                     index === 0
-                                        ? "bg-blue-600 hover:bg-blue-700"
+                                        ? "bg-leolab-red hover:bg-red-700"
                                         : ""
                                 }
                             >
@@ -106,7 +109,7 @@ export function Portfolio() {
                     {projects.map((project, index) => (
                         <Card
                             key={index}
-                            className="group hover:shadow-xl transition-all duration-300 overflow-hidden"
+                            className="py-0 group hover:shadow-xl transition-all duration-300 overflow-hidden"
                         >
                             <div className="relative overflow-hidden">
                                 <ImageWithFallback
@@ -114,7 +117,7 @@ export function Portfolio() {
                                     alt={project.title}
                                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
-                                <div className="absolute top-4 right-4">
+                                {/* <div className="absolute top-4 right-4">
                                     <Badge
                                         variant={
                                             project.status === "Live"
@@ -131,7 +134,7 @@ export function Portfolio() {
                                     >
                                         {project.status}
                                     </Badge>
-                                </div>
+                                </div> */}
                                 <div className="absolute top-4 left-4">
                                     <Badge
                                         variant="outline"
@@ -143,7 +146,7 @@ export function Portfolio() {
                             </div>
 
                             <CardContent className="p-6">
-                                <h3 className="font-bold text-xl mb-2 group-hover:text-blue-600 transition-colors">
+                                <h3 className="font-bold text-xl mb-2 group-hover:text-leolab-red transition-colors">
                                     {project.title}
                                 </h3>
                                 <p className="text-gray-600 mb-4 line-clamp-3">

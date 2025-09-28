@@ -6,6 +6,7 @@ import { Portfolio } from "@/components/Portfolio";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { Industries } from "@/components/Industries";
+import { ExecutionProcess } from "@/components/ExecutionProcess";
 
 export default function App() {
     return (
@@ -15,9 +16,7 @@ export default function App() {
                 <Hero />
                 <Services />
                 <Industries />
-                <About />
                 <Portfolio />
-                <Contact />
             </main>
             <Footer />
         </div>

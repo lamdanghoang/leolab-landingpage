@@ -49,37 +49,13 @@ export function About() {
                                 and innovative software solutions that drive
                                 business growth.
                             </p>
-                            <p className="text-gray-600 leading-relaxed">
-                                Founded with a vision to transform how
-                                businesses operate in the digital world, we
-                                combine cutting-edge technology with deep
-                                industry expertise to deliver solutions that
-                                exceed expectations. Our team of skilled
-                                developers, designers, and strategists work
-                                collaboratively to bring your ideas to life.
-                            </p>
-                        </div>
-
-                        {/* Features */}
-                        <div className="space-y-3">
-                            {features.map((feature, index) => (
-                                <div
-                                    key={index}
-                                    className="flex items-center space-x-3"
-                                >
-                                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                                    <span className="text-gray-700">
-                                        {feature}
-                                    </span>
-                                </div>
-                            ))}
                         </div>
 
                         <Button
                             size="lg"
                             className="bg-blue-600 hover:bg-blue-700"
                         >
-                            Learn More About Us
+                            Contact Us
                         </Button>
                     </div>
 

@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "./ui/button";
 
 export function Hero() {
@@ -30,6 +32,9 @@ export function Hero() {
                         <Button
                             size="lg"
                             className="px7 py-2.5 bg-leolab-red text-white hover:bg-white text-base font-bold hover:text-leolab-red border-2 border-leolab-red rounded-4xl uppercase"
+                            onClick={() =>
+                                window.open("https://t.me/DatPQD", "_blank")
+                            }
                         >
                             Consult Our Experts
                         </Button>

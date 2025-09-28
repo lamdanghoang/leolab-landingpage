@@ -1,189 +1,114 @@
-import { Separator } from "@/components/ui/separator";
+"use client";
 
-const footerSections = [
-    {
-        title: "Services",
-        links: [
-            "Blockchain Development",
-            "Mobile App Development",
-            "Web Development",
-            "AI & Machine Learning",
-            "Cloud Solutions",
-            "Cybersecurity",
-        ],
-    },
-    {
-        title: "Company",
-        links: [
-            "About Us",
-            "Our Team",
-            "Careers",
-            "Blog",
-            "Case Studies",
-            "Contact",
-        ],
-    },
-    {
-        title: "Resources",
-        links: [
-            "Documentation",
-            "API Reference",
-            "Support Center",
-            "Community",
-            "Tutorials",
-            "Whitepapers",
-        ],
-    },
-    {
-        title: "Legal",
-        links: [
-            "Privacy Policy",
-            "Terms of Service",
-            "Cookie Policy",
-            "GDPR Compliance",
-            "Security",
-            "Disclaimer",
-        ],
-    },
-];
+import {
+    MapPin,
+    Phone,
+    Mail,
+    Facebook,
+    Twitter,
+    Linkedin,
+    Github,
+    Send,
+} from "lucide-react";
+import Image from "next/image";
+import { Button } from "./ui/button"; // Assuming your Button component is styled for social icons
 
 export function Footer() {
     return (
+        // Adjusted padding to match the compact feel of the image
         <footer className="bg-gray-900 text-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-                    {/* Company Info */}
-                    <div className="lg:col-span-2">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+                {/* Two-Column Layout */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    {/* LEFT COLUMN: Contact Info */}
+                    <div className="space-y-6">
+                        {/* Company Logo/Name (Kept from original for context, can be removed) */}
                         <div className="flex items-center mb-6">
-                            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                                <span className="text-white font-bold">S</span>
+                            <div className="w-5">
+                                <Image
+                                    src="/leolab-logo.png"
+                                    alt="LeoLab logo"
+                                    width={32}
+                                    height={32}
+                                />
                             </div>
-                            <span className="ml-2 text-xl font-bold">
-                                SoluLab
+                            <span className="ml-2 text-xl bg-gradient-to-r from-leolab-red to-leolab-orange bg-clip-text text-transparent font-bold">
+                                LeoLab
                             </span>
                         </div>
-                        <p className="text-gray-300 mb-6 leading-relaxed">
+
+                        {/* Location */}
+                        <div className="flex items-start">
+                            <MapPin className="w-5 h-5 mr-4 flex-shrink-0 text-white" />
+                            <p className="text-gray-300 text-base">
+                                Ho Chi Minh City
+                                <br />
+                                Vietnam
+                            </p>
+                        </div>
+
+                        {/* Phone */}
+                        {/* <div className="flex items-center">
+                            <Phone className="w-5 h-5 mr-4 flex-shrink-0 text-white" />
+                            <p className="text-gray-300 text-base">
+                                +1 555 123456
+                            </p>
+                        </div> */}
+
+                        {/* Email */}
+                        <div className="flex items-center">
+                            <Mail className="w-5 h-5 mr-4 flex-shrink-0 text-white" />
+                            <a
+                                href="mailto:nimpham@leofi.xyz"
+                                className="text-blue-400 hover:text-blue-300 transition-colors text-base"
+                            >
+                                nimpham@leofi.xyz
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* RIGHT COLUMN: About and Social Links */}
+                    <div className="md:pl-12">
+                        <h3 className="text-xl font-bold mb-6">About LeoLab</h3>
+                        <p className="text-gray-300 mb-8 leading-relaxed">
                             Building the future of technology with innovative
-                            blockchain solutions, mobile applications, and
-                            cutting-edge software development.
+                            blockchain solutions, AI workflow, mobile
+                            applications, and cutting-edge software development.
                         </p>
 
-                        {/* Social Media */}
-                        <div className="flex space-x-4">
-                            <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-blue-600 transition-colors">
-                                <span className="text-white font-bold text-sm">
-                                    Li
-                                </span>
-                            </div>
-                            <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-blue-400 transition-colors">
-                                <span className="text-white font-bold text-sm">
-                                    Tw
-                                </span>
-                            </div>
-                            <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-gray-700 transition-colors">
-                                <span className="text-white font-bold text-sm">
-                                    Gh
-                                </span>
-                            </div>
-                            <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-red-600 transition-colors">
-                                <span className="text-white font-bold text-sm">
-                                    Yt
-                                </span>
-                            </div>
+                        {/* Social Media Buttons (Square, Dark background) */}
+                        <div className="flex space-x-3">
+                            {/* NOTE: You should adjust the Button styling (bg-gray-800) 
+                                   to match the image's dark, square button style */}
+
+                            <Button
+                                onClick={() =>
+                                    window.open("https://t.me/DatPQD", "_blank")
+                                }
+                                className="w-10 h-10 p-2 bg-gray-800 hover:bg-gray-700 transition-colors rounded-md"
+                            >
+                                <Send className="w-6 h-6 text-white" />
+                            </Button>
+
+                            {/* <Button className="w-10 h-10 p-2 bg-gray-800 hover:bg-gray-700 transition-colors rounded-md">
+                                <Twitter className="w-6 h-6 text-white" />
+                            </Button>
+
+                            <Button className="w-10 h-10 p-2 bg-gray-800 hover:bg-gray-700 transition-colors rounded-md">
+                                <Linkedin className="w-6 h-6 text-white" />
+                            </Button>
+
+                            <Button className="w-10 h-10 p-2 bg-gray-800 hover:bg-gray-700 transition-colors rounded-md">
+                                <Github className="w-6 h-6 text-white" />
+                            </Button> */}
                         </div>
                     </div>
-
-                    {/* Footer Sections */}
-                    {footerSections.map((section, index) => (
-                        <div key={index}>
-                            <h3 className="font-semibold mb-4">
-                                {section.title}
-                            </h3>
-                            <ul className="space-y-3">
-                                {section.links.map((link, linkIndex) => (
-                                    <li key={linkIndex}>
-                                        <a
-                                            href="#"
-                                            className="text-gray-300 hover:text-white transition-colors text-sm"
-                                        >
-                                            {link}
-                                        </a>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
                 </div>
 
-                <Separator className="my-8 bg-gray-800" />
-
-                {/* Bottom Footer */}
-                <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                {/* Copyright/Bottom Section (Keeping it simple for now) */}
+                <div className="mt-16 pt-8 border-t border-gray-800">
                     <div className="text-gray-300 text-sm">
-                        © 2024 SoluLab. All rights reserved.
-                    </div>
-
-                    <div className="flex items-center space-x-6 text-sm text-gray-300">
-                        <a
-                            href="#"
-                            className="hover:text-white transition-colors"
-                        >
-                            Privacy Policy
-                        </a>
-                        <a
-                            href="#"
-                            className="hover:text-white transition-colors"
-                        >
-                            Terms of Service
-                        </a>
-                        <a
-                            href="#"
-                            className="hover:text-white transition-colors"
-                        >
-                            Cookie Settings
-                        </a>
-                    </div>
-                </div>
-
-                {/* Additional Info */}
-                <div className="mt-8 pt-8 border-t border-gray-800">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-gray-300">
-                        <div>
-                            <h4 className="font-semibold text-white mb-2">
-                                Headquarters
-                            </h4>
-                            <p>
-                                123 Tech Street
-                                <br />
-                                Silicon Valley, CA 94043
-                                <br />
-                                United States
-                            </p>
-                        </div>
-                        <div>
-                            <h4 className="font-semibold text-white mb-2">
-                                Development Centers
-                            </h4>
-                            <p>
-                                London, UK
-                                <br />
-                                Toronto, Canada
-                                <br />
-                                Mumbai, India
-                            </p>
-                        </div>
-                        <div>
-                            <h4 className="font-semibold text-white mb-2">
-                                Certifications
-                            </h4>
-                            <p>
-                                ISO 27001 Certified
-                                <br />
-                                SOC 2 Type II
-                                <br />
-                                GDPR Compliant
-                            </p>
-                        </div>
+                        © 2025 LeoLab. All rights reserved.
                     </div>
                 </div>
             </div>

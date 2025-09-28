@@ -16,20 +16,12 @@ const navigations = [
         href: "#services",
     },
     {
-        label: "Hire Developers",
-        href: "#hire",
-    },
-    {
         label: "Industries",
         href: "#industries",
     },
     {
-        label: "Case Studies",
-        href: "#case",
-    },
-    {
-        label: "Blog",
-        href: "#blog",
+        label: "Portfolio",
+        href: "#portfolio",
     },
 ];
 
@@ -72,8 +64,16 @@ export function Header() {
 
                     {/* CTA Button */}
                     <div className="hidden md:flex">
-                        <Button className="px-6 bg-transparent text-red-600 border-2 border-red-600 text-base hover:bg-red-600 hover:text-white rounded-none">
-                            Inquire
+                        <Button
+                            onClick={() =>
+                                window.open(
+                                    "https://calendly.com/phamdat721101/30min",
+                                    "_blank"
+                                )
+                            }
+                            className="px-6 bg-transparent text-red-600 border-2 border-red-600 text-base hover:bg-red-600 hover:text-white rounded-none"
+                        >
+                            Booking
                         </Button>
                     </div>
 

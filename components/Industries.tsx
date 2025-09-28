@@ -14,10 +14,6 @@ import {
 
 const industires = [
     {
-        icon: Container,
-        title: "Supply Chain",
-    },
-    {
         icon: HeartPulse,
         title: "Healthcare",
     },
@@ -49,32 +45,28 @@ const industires = [
         icon: Landmark,
         title: "Government",
     },
-    {
-        icon: Fuel,
-        title: "Oil & Gas",
-    },
 ];
 
 export function Industries() {
     return (
-        <section id="services" className="py-20 bg-white">
+        <section id="industries" className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl font-semibold text-gray-900">
                         Industries <span className="font-bold">We serve</span>
                     </h2>
-                    <div className="w-40 h-0.5 bg-red-500 mx-auto mt-2 mb-4"></div>
+                    <div className="w-40 h-0.5 bg-leolab-red mx-auto mt-2 mb-4"></div>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5">
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4">
                     {industires.map((industry, index) => (
                         <Card
                             key={index}
-                            className="p-7.5 group hover:bg-red-500 shadow-none transition-all duration-300 border-none"
+                            className="p-7.5 group hover:bg-leolab-red shadow-none transition-all duration-300 border-none"
                         >
                             <CardHeader className="p-0 flex flex-col items-center justify-center">
                                 <industry.icon
-                                    className="h-15 w-15 text-red-500 group-hover:text-white mb-4"
+                                    className="h-15 w-15 text-leolab-red group-hover:text-white mb-4"
                                     strokeWidth={1}
                                 />
                                 <CardTitle className="text-sm font-bold mb-2 group-hover:text-white">
