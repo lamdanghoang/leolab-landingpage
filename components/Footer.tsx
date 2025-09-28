@@ -1,17 +1,8 @@
 "use client";
 
-import {
-    MapPin,
-    Phone,
-    Mail,
-    Facebook,
-    Twitter,
-    Linkedin,
-    Github,
-    Send,
-} from "lucide-react";
+import { MapPin, Mail, Send } from "lucide-react";
 import Image from "next/image";
-import { Button } from "./ui/button"; // Assuming your Button component is styled for social icons
+import { Button } from "./ui/button";
 
 export function Footer() {
     return (

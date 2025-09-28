@@ -23,14 +23,14 @@ const achievements = [
     },
 ];
 
-const features = [
-    "Agile development methodology",
-    "24/7 technical support",
-    "End-to-end project management",
-    "Quality assurance testing",
-    "Post-launch maintenance",
-    "Scalable architecture design",
-];
+// const features = [
+//     "Agile development methodology",
+//     "24/7 technical support",
+//     "End-to-end project management",
+//     "Quality assurance testing",
+//     "Post-launch maintenance",
+//     "Scalable architecture design",
+// ];
 
 export function About() {
     return (

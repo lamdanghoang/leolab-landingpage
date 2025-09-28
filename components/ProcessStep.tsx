@@ -14,13 +14,9 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
     icon: Icon,
     title,
     description,
-    isHovered,
+    // isHovered,
     isEven,
 }) => {
-    const iconWrapperClasses = `${styles.iconWrapper} ${
-        isHovered ? styles.hovered : ""
-    }`;
-
     return (
         <div
             className={`group flex items-center w-full relative ${

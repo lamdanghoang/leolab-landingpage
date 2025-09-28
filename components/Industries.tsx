@@ -1,6 +1,5 @@
 import { Card, CardHeader, CardTitle } from "./ui/card";
 import {
-    Fuel,
     Landmark,
     Scale,
     TvMinimalPlay,
@@ -9,7 +8,6 @@ import {
     MapPinHouse,
     School,
     HeartPulse,
-    Container,
 } from "lucide-react";
 
 const industires = [
